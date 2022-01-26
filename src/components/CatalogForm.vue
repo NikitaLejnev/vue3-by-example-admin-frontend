@@ -37,3 +37,27 @@
     </div>
   </Form>
 </template>
+
+<script>
+import * as yup from "yup";
+import axios from "axios";
+import { APIURL } from "@/constants";
+
+const schema = yup.object().shape({
+  name: yup.string().required(),
+  description: yup.string().required(),
+  imageUrl: yup.string().url().required(),
+});
+
+export default {
+  name: "BookingForm",
+  data() {
+    return {
+      name: "",
+      description: "",
+      imageUrl: "",
+      schema,
+    };
+  },
+};
+</script>
