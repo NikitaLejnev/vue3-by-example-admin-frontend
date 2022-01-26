@@ -16,11 +16,13 @@
         <small class="p-error" v-if="errors.length > 0">Username is invalid.</small>
       </div>
     </Field>
+
     <Field v-slot="{ field, errors }" v-model="password" name="password">
       <div class="p-col-12">
         <div class="p-inputgroup">
           <InputText
             placeholder="Password"
+            type="password"
             :class="{ 'p-invalid': errors.length > 0 }"
             v-bind="field"
           />

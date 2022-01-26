@@ -4,15 +4,15 @@
 
 <script>
 export default {
-  name: 'App',
+  name: "App",
 };
 </script>
 
 <style>
 body {
-  background-color: black;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica,
+    Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   font-weight: normal;
   color: #495057;
   -webkit-font-smoothing: antialiased;

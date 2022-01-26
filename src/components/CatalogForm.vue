@@ -8,6 +8,7 @@
         <small class="p-error" v-if="errors.length > 0">Name is invalid.</small>
       </div>
     </Field>
+
     <Field v-slot="{ field, errors }" v-model="description" name="description">
       <div class="p-col-12">
         <div class="p-inputgroup">
@@ -20,6 +21,7 @@
         <small class="p-error" v-if="errors.length > 0">Description is invalid</small>
       </div>
     </Field>
+
     <Field v-slot="{ field, errors }" v-model="imageUrl" name="imageUrl">
       <div class="p-col-12">
         <div class="p-inputgroup">
@@ -32,12 +34,12 @@
         <small class="p-error" v-if="errors.length > 0">Image URL is invalid.</small>
       </div>
     </Field>
+
     <div class="p-col-12">
       <Button label="Add" type="submit" />
     </div>
   </Form>
 </template>
-
 <script>
 import * as yup from "yup";
 import axios from "axios";

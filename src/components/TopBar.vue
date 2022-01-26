@@ -9,7 +9,9 @@
 <script>
 export default {
   name: "TopBar",
-  props: { title: String, },
+  props: {
+    title: String,
+  },
   data() {
     return {
       items: [
@@ -19,8 +21,20 @@ export default {
             this.$router.push("/bookings");
           },
         },
-      ]
-    }
+        {
+          label: "Manage Vacation Packages",
+          command: () => {
+            this.$router.push("/catalog");
+          },
+        },
+        {
+          label: "Log Out",
+          command: () => {
+            this.logOut();
+          },
+        },
+      ],
+    };
   },
   methods: {
     logOut() {
@@ -28,6 +42,8 @@ export default {
       this.$router.push("/");
     },
   },
-  beforeMount() { document.title === this.title; },
+  beforeMount() {
+    document.title = this.title;
+  },
 };
 </script>

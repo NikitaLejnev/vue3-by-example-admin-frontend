@@ -13,7 +13,6 @@ import { Form, Field } from "vee-validate";
 import "primeflex/primeflex.css";
 import "primevue/resources/themes/bootstrap4-light-blue/theme.css";
 import "primevue/resources/primevue.min.css";
-import "primevue/primeicons.css";
 import "./plugins/axios";
 
 const app = createApp(App);
