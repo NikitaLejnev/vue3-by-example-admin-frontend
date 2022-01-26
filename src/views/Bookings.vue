@@ -23,3 +23,34 @@
     </Card>
   </div>
 </template>
+
+<script>
+import axios from "axios";
+import { APIURL } from "@/constants";
+import TopBar from "@/components/TopBar";
+
+export default {
+  name: "Bookings",
+  components: {
+    TopBar,
+  },
+  data() {
+    return {
+      bookings: [],
+    };
+  },
+  methods: {
+    async getBookings() {
+      const { data } = await axios.get(`${APIURL}/bookings`);
+      this.bookings = data;
+    },
+    async deleteBooking(bookingId) {
+      await axios.delete(`${APIURL}/bookings/${bookingId}`);
+      this.getBookings();
+    },
+  },
+  beforeMount() {
+    this.getBookings();
+  },
+};
+</script>
