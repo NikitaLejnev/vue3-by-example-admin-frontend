@@ -32,5 +32,8 @@
         <small class="p-error" v-if="errors.length > 0">Image URL is invalid.</small>
       </div>
     </Field>
+    <div class="p-col-12">
+      <Button label="Add" type="submit" />
+    </div>
   </Form>
 </template>
