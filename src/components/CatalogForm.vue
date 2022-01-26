@@ -59,5 +59,16 @@ export default {
       schema,
     };
   },
+  methods: {
+    async onSubmit(value) {
+      const { name, description, imageUrl } = value;
+      await axios.post(`${APIURL}/catalog`, {
+        name,
+        description,
+        imageUrl,
+      });
+      this.$emit("catalog-form-close");
+    },
+  },
 };
 </script>
