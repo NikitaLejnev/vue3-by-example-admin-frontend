@@ -6,7 +6,7 @@ import Button from "primevue/button";
 import Card from "primevue/card";
 import Toolbar from "primevue/toolbar";
 import router from "./plugins/vue-router";
-import Textarea from "primevue/dialog";
+import Textarea from "primevue/textarea";
 import Dialog from "primevue/dialog";
 import Menubar from "primevue/menubar";
 import { Form, Field } from "vee-validate";

@@ -27,7 +27,7 @@
             v-bind="field"
           />
         </div>
-        <small class="p-error" v-if="errors.length > 0">Password is invalid.</small>
+        <small class="p-error" v-if="errors.length > 0">Password is invalid</small>
       </div>
     </Field>
 
